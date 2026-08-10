@@ -6,26 +6,26 @@ export const OFFICIAL_REGISTRY = 'registry.redhat.io';
 
 export const KNOWN_IMAGES: KnownImage[] = [
   {
-    reference: 'registry.redhat.io/rhel10/rhel-bootc-kvm:latest',
+    reference: `${OFFICIAL_REGISTRY}/rhel10/rhel-bootc-kvm:latest`,
     distro: 'rhel-10.3',
     name: 'Red Hat Enterprise Linux (RHEL) 10.3',
     type: 'guest-image',
   },
   {
-    reference: 'registry.redhat.io/rhel10/rhel-bootc-aws:latest',
+    reference: `${OFFICIAL_REGISTRY}/rhel10/rhel-bootc-aws:latest`,
     distro: 'rhel-10.3',
     name: 'Red Hat Enterprise Linux (RHEL) 10.3',
     type: 'aws',
   },
   {
-    reference: 'registry.redhat.io/rhel10/rhel-bootc-installer:latest',
+    reference: `${OFFICIAL_REGISTRY}/rhel10/rhel-bootc-installer:latest`,
     distro: 'rhel-10.3',
     name: 'Red Hat Enterprise Linux (RHEL) 10.3',
     type: 'bootable-container-iso',
     // Assuming that the installer targets bare-metal deployments,
     // so let's use the base image as the payload so there's no
     // cloud/VM specific configuration.
-    iso_payload_references: ['registry.redhat.io/rhel10/rhel-bootc:latest'],
+    iso_payload_references: [`${OFFICIAL_REGISTRY}/rhel10/rhel-bootc:latest`],
   },
 ];
 
